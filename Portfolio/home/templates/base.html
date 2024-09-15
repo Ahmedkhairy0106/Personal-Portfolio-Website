@@ -3,7 +3,7 @@
 <nav class="border-gray-200 {% if request.path == '/' or request.path == '/about/' or request.path == '/projects/' or request.path == '/all_projects/'%}dark:bg-gray-900{% else %}bg-white{% endif %}">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="{% url 'HOME' %}" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="{% static 'images/emot.png' %}" class="h-8" alt="char Logo" />
+            <img src="{% static 'images/programmer.png' %}" class="h-8" alt="char Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap {% if request.path == '/' or request.path == '/about/' or request.path == '/projects/' or request.path == '/all_projects/'%}text-white{% else %}text-black{% endif %}">Ahmed Khairy</span>
         </a>
 
