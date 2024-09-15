@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link href="{% static 'src/styles.css' %}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="flex justify-center items-center min-h-screen bg-gray-100">
+      <div class="max-w-[500px] bg-white shadow p-4">
+        <section>
+          <p class="text-xl font-semibold pb-5">About Me</p>
+          <p class="pb-2">
+            Hello! I'm a dedicated full-stack web developer with a passion for
+            creating efficient and innovative web solutions. I specialize in
+            using technologies like Django to build dynamic and responsive
+            applications. My goal is to deliver high-quality projects that meet
+            your needs and exceed expectations. Thank you for visiting, and I
+            look forward to collaborating with you!
+          </p>
+          <a
+            href="{% url 'HOME' %}"
+            class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-4"
+          >
+            Get to know Me
+          </a>
+        </section>
+      </div>
+    </div>
+    <script src="{% static 'src/script.js' %}"></script>
+  </body>
+</html>
+
+{% endblock %}

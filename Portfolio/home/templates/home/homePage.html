@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link href="{% static 'src/styles.css' %}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="flex justify-center items-center min-h-screen">
+      <div class="flex flex-col justify-center items-start ml-64">
+        <p class="text-5xl font-semibold pb-3">Hi, I am Ahmed Khairy</p>
+        <p class="text-2xl font-medium pb-3 text-gray-500">
+          I'm a full-stack web developer
+        </p>
+        <p class="text-2xl font-medium pb-3 text-gray-500">1+ Years</p>
+        <div class="text-2xl">
+          <p class="pb-4 text-gray-500">
+            I'm a full-stack web developer with expertise in Django. I build
+            dynamic and responsive web applications, handling both the frontend
+            and backend seamlessly. I have over a year of experience in
+            developing efficient and scalable solutions.
+          </p>
+        </div>
+        <a
+          href="{% url 'CONTACT' %}"
+          class="text-xl font-medium text-white px-4 py-2 rounded-full bg-blue-500 hover:bg-blue-600"
+          >Contact Me</a
+        >
+      </div>
+      <div class="mr-52">
+        <img
+          src="{% static 'images/male.png' %}"
+          alt="Profile"
+          class="object-cover rounded-full shadow-2xl"
+        />
+      </div>
+    </div>
+    <script src="{% static 'src/script.js' %}"></script>
+  </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link href="{% static 'src/styles.css' %}" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100">
+    <section id="mid" class="py-12">
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold pb-10">Cinema Ticket Booking System</h1>
+        <h2 class="subheader text-center text-2xl font-bold text-gray-700">
+          Key Features
+        </h2>
+      </div>
+
+      <div class="container mx-auto flex flex-col md:flex-row items-center">
+        <div class="section__pic-container mb-8 md:mb-0 md:w-1/3">
+          <img
+            src="{% static 'images/booking_text.jpg' %}"
+            alt="project image"
+            class="about-pic rounded-full w-48 h-48 mx-auto shadow-lg"
+          />
+        </div>
+        <div class="container md:w-2/3">
+          <div class="feature-list">
+            {% for feature in features %}
+            <div class="feature-item mb-4">
+              <div class="feature-content">
+                <span class="feature-title text-gray-900 font-bold"
+                  >{{ feature.title }}</span
+                >
+                {% for line in feature.description %}
+                <p class="ml-12">{{ line }}</p>
+                {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        {% comment %} arrow back {% endcomment %}
+      </div>
+    </section>
+  </body>
+  <script src="{% static 'src/script.js' %}"></script>
+</html>
+
+{% endblock %}
