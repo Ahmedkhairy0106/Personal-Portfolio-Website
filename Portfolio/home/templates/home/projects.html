@@ -1,5 +1,11 @@
-{% extends "base.html" %} {% block content %} {% load static %}
+{% extends "base.html" %}
+{% load static %}
 
+{% block header %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +27,7 @@
       </p>
     </div>
     <div
-      class="projects_card grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center p-5 mx-28"
+      class="projects_card grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-center p-28 mx-28"
     >
       {% for project in projects %}
       <div>
@@ -52,4 +58,10 @@
   </body>
 </html>
 
+{% endblock content %}
+
+
+{% block footer %}
+    {{ block.super }}
 {% endblock %}
+

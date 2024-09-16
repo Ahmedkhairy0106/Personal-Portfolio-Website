@@ -1,5 +1,12 @@
-{% extends "base.html" %} {% block content %} {% load static %}
+{% extends "base.html" %}
 
+{% load static %}
+
+{% block header %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,4 +50,8 @@
   </body>
 </html>
 
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
 {% endblock %}
