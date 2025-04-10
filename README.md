@@ -39,29 +39,32 @@ Before running the project, ensure you have the following installed:
    pip install -r requirements.txt
    ```
 4. **Configure PostgreSQL**:
-	•	Create a PostgreSQL database:
+   Create a PostgreSQL database:
    ```bash
    psql -U postgres
    CREATE DATABASE portfolio_db;
    ```
    
-	•	Update the DATABASES setting in settings.py with your PostgreSQL 
+- Update the DATABASES setting in settings.py with your PostgreSQL 
 
-	4.	Apply Migrations:
-python manage.py makemigrations
-python manage.py migrate
-
-	5.	Run the Server:
-python manage.py runserver
-
-	•	Open your browser and go to http://127.0.0.1:8000/ to view the website.
+- Apply Migrations:
+   ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+   ```
+- Run the Server:
+   ```bash
+   python manage.py runserver
+   ```
+- Open your browser and go to http://127.0.0.1:8000/ to view the website.
 
 ## Usage
 
-•	Add your projects and personal details via the Django admin panel:
-•	Create a superuser:
-python manage.py createsuperuser
-
+• Add your projects and personal details via the Django admin panel:
+• Create a superuser:
+   ```bash
+   python manage.py createsuperuser
+   ```
 - Access the admin panel at http://127.0.0.1:8000/admin.
 
 ## Contributing
