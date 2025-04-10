@@ -45,18 +45,19 @@ Before running the project, ensure you have the following installed:
    CREATE DATABASE portfolio_db;
    ```
    
-- Update the DATABASES setting in settings.py with your PostgreSQL 
+5. **Update the DATABASES setting in settings.py with your PostgreSQL**
 
 - Apply Migrations:
    ```bash
-    python manage.py makemigrations
-    python manage.py migrate
+      python manage.py makemigrations
+      python manage.py migrate
    ```
 - Run the Server:
    ```bash
-   python manage.py runserver
+      python manage.py runserver
    ```
-- Open your browser and go to http://127.0.0.1:8000/ to view the website.
+- Open your browser and go to http://127.0.0.1:8000/
+to view the website.
 
 ## Usage
 
